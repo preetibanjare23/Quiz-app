@@ -1,0 +1,721 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+* {
+    box-sizing: border-box;
+    max-width: 100vw;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Navbar container */
+.navbar {
+    background: radial-gradient(circle, #52184f, #692886);
+    padding: 10px 20px; /* Added padding for spacing */
+}
+
+#navbar-top {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000; /* Ensure navbar stays on top */
+}
+
+/* App heading styles */
+.app-heading {
+    display: flex;
+    align-items: center;
+}
+
+.app-heading svg {
+    width: 4vh; /* Adjusted size for better fit */
+    height: 4vh;
+    margin-right: 1vh;
+    color: #ecf0f1;
+}
+
+.app-heading h1 {
+    color: #ecf0f1;
+    font-size: 1.5rem; /* Adjust font size for better responsiveness */
+}
+
+/* Navbar links */
+.navbar-nav .nav-link {
+    color: #ecf0f1 !important;
+    margin-right: 2rem;
+    font-weight: bold;
+    font-size: 1rem;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Navbar toggler (hamburger button) */
+.navbar-toggler {
+    background-color: #ecf0f1 !important; /* White background for the button */
+    border: none; /* Optional: Remove the border */
+}
+
+/* Collapse navbar content on small screens */
+.navbar-collapse {
+    flex-grow: 0;
+    text-align: center;
+}
+
+/* Adjustments for mobile screens */
+@media (max-width: 768px) {
+    .app-heading h1 {
+        font-size: 1.2rem; /* Smaller font size on mobile */
+    }
+
+    .navbar-nav .nav-link {
+        margin-right: 1rem; /* Less margin between links */
+        font-size: 0.9rem; /* Smaller font size on mobile */
+    }
+
+    .navbar-toggler {
+        margin-left: auto; /* Ensure the button is aligned to the right */
+    }
+
+    #sort h1 {
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
+        padding-top: 2.5rem;
+    }
+}
+
+/* Media Query for 230px to 330px Devices */
+@media (max-width: 330px) {
+    .app-heading h1 {
+        font-size: 1rem;
+    }
+
+    .app-heading svg {
+        width: 2.5vh;
+        height: 2.5vh;
+        margin-right: 0.5vh;
+    }
+
+    .navbar-nav .nav-link {
+        margin-right: 1rem;
+        font-size: 0.9rem;
+    }
+
+    #navbarNav {
+        text-align: center;
+    }
+
+    .navbar-toggler {
+        padding: 0.25rem 0.5rem;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+    }
+}
+
+
+/* Hero section styling */
+#div1 {
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+/* Container for text */
+#sort {
+    width: 50%;
+    min-width: 300px;
+    box-sizing: border-box;
+}
+
+#sort h1 {
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+    color: rgb(107, 36, 105);
+    font-size: 2.2rem; /* Adjust font size for better readability */
+}
+
+#sort p {
+    margin-top: 3vh;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: rgb(129, 69, 127);
+    font-weight: bold;
+    font-size: 1.2rem; /* Adjust font size */
+}
+
+#sort button {
+    border: none;
+    margin-top: 3vh;
+    display: block;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 10px 20px; /* Added padding for better button size */
+    background: linear-gradient(90deg, #c56cd6, #3427aa); /* Add button background */
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#sort button:hover {
+    background: linear-gradient(90deg, #d14b92, #685bff);
+}
+
+#sort button a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem; /* Adjust font size */
+}
+
+/* Base styles (already provided) */
+
+/* Responsive styles for small screens */
+@media (max-width: 320px) {
+    #div1 {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    #sort {
+        width: 100%;
+        min-width: unset;
+        text-align: center;
+    }
+
+    #sort h1 {
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
+    }
+
+    #sort p {
+        font-size: 1rem; /* Adjust font size for smaller screens */
+        width: 100%; /* Make paragraph full width for better readability */
+    }
+
+    #sort button {
+        padding: 8px 16px; /* Adjust padding for a smaller button */
+        font-size: 0.9rem; /* Adjust font size for button text */
+    }
+
+    #img1 {
+        width: 100%; /* Make image responsive */
+        height: auto; /* Maintain aspect ratio */
+        margin-top: 20px; /* Add margin-top to separate from text */
+    }
+}
+
+/* Responsive styles for larger small screens (230px to 320px) */
+@media (min-width: 231px) and (max-width: 320px) {
+    #div1 {
+        padding: 15px; /* Slightly more padding than the smallest screens */
+    }
+
+    #sort h1 {
+        font-size: 1.8rem; /* Slightly larger font size for mid-size small screens */
+    }
+
+    #sort p {
+        font-size: 1.1rem; /* Slightly larger font size for mid-size small screens */
+    }
+
+    #sort button {
+        padding: 9px 18px; /* Slightly larger padding for mid-size small screens */
+        font-size: 0.95rem; /* Slightly larger font size for button text */
+    }
+}
+
+
+/* Image styling */
+#div1 #img1 {
+    max-height: 40rem;
+    width: 50%;
+    max-width: 700px;
+    margin: 0; /* Remove margin */
+    
+}
+
+/* Media queries for responsiveness */
+
+/* For tablets and medium screens */
+@media (max-width: 768px) {
+    #sort {
+        width: 100%; /* Full width for text on medium screens */
+    }
+
+    #div1 #img1 {
+        width: 100%; /* Full width for image on medium screens */
+        max-height: 30rem; /* Reduce image height */
+    }
+
+    #sort h1 {
+        font-size: 1.8rem; /* Adjust font size */
+    }
+
+    #sort p {
+        font-size: 1rem; /* Adjust font size */
+    }
+}
+
+/* For mobile phones and small screens */
+@media (max-width: 480px) {
+    #div1 {
+        flex-direction: column; /* Stack elements vertically */
+    }
+
+    #sort {
+        width: 100%; /* Full width for text on small screens */
+    }
+
+    #div1 #img1 {
+        width: 90%; /* Image width adjustment */
+        max-width: 100%; /* Ensure image scales properly */
+        max-height: 20rem; /* Further reduce image height */
+    }
+
+    #sort h1 {
+        font-size: 1.5rem; /* Further adjust font size */
+    }
+
+    #sort p {
+        font-size: 0.9rem; /* Further adjust font size */
+    }
+
+    #sort button {
+        font-size: 0.9rem; /* Adjust button text size */
+        padding: 8px 16px; /* Adjust padding */
+    }
+}
+
+@media (max-width: 330px) {
+    #div1 {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    #sort {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    #sort h1 {
+        font-size: 20px;
+        margin-top: 2vh;
+    }
+
+    #sort p {
+        font-size: 14px;
+    }
+
+    #sort button {
+        width: 90%;
+        font-size: 16px;
+    }
+
+    #div1 #img1 {
+        width: 90%;
+        max-width: 250px;
+        margin-top: 2vh;
+    }
+}
+
+
+/* Second container */
+.div2 {
+    text-align: center;
+    background: radial-gradient(circle, #9518dd, #fc60e7);
+    padding: 20px 0; /* Added padding to avoid tight spacing */
+    height: 100%;
+    width:100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.div2 h2 {
+    margin-top: 10vh;
+    font-weight: bold;
+    font-size: 2rem; /* Adjust font size for better readability */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Space between text and image */
+}
+
+.div2 p {
+    font-weight: bold;
+    font-size: 1.2rem; /* Adjusted font size */
+    margin: 10px 0; /* Added margin for spacing */
+}
+
+#play-image {
+    width: 3rem;
+}
+
+.animated-image {
+    margin-top: 20px; /* Added margin for spacing */
+}
+
+.animated-image img {
+    width: 15rem;
+    animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-30px);
+    }
+}
+
+/* Media queries for responsiveness */
+
+/* For tablets and medium screens */
+@media (max-width: 768px) {
+    .div2 h2 {
+        font-size: 1.8rem; /* Adjust font size */
+    }
+
+    .div2 p {
+        font-size: 1.1rem; /* Adjust font size */
+    }
+
+    #play-image {
+        width: 2.5rem; /* Adjust image size */
+    }
+
+    .animated-image img {
+        width: 5rem; /* Adjust image size */
+    }
+}
+
+/* For mobile phones and small screens */
+@media (max-width: 480px) {
+    .div2 h2 {
+        font-size: 1.6rem; /* Further adjust font size */
+        margin-top: 5vh; /* Reduce top margin */
+    }
+
+    .div2 p {
+        font-size: 1rem; /* Further adjust font size */
+        margin: 8px 0; /* Reduce margins */
+    }
+
+    #play-image {
+        width: 2rem; /* Further reduce image size */
+    }
+
+    .animated-image img {
+        width: 4rem; /* Further reduce image size */
+    }
+}
+
+@media (max-width: 330px) {
+    .div2 {
+        padding: 15px 5px; /* Further adjusted padding for very small screens */
+        width: 100% !important;
+    }
+
+    .div2 h2 {
+        font-size: 18px;
+    }
+
+    .div2 p.allp {
+        font-size: 12px; /* Further reduced font size */
+    }
+
+    #play-image {
+        width: 1.5rem; /* Further reduced image size */
+    }
+
+    .animated-image img {
+        width: 40%; /* Further reduced image size */
+        max-width: 80px;
+    }
+}
+
+
+/* Third container */
+#div3 {
+    padding: 9vh;
+    text-align: center;
+    background: radial-gradient(circle, #9518dd, #fc60e7);
+    height: 100%;
+}
+
+#div3 #deffrent {
+    display: flex;
+    flex-wrap: wrap; /* Wrap items on smaller screens */
+    justify-content: center; /* Center items horizontally */
+}
+
+#div3 .same {
+    border: 1px solid white;
+    margin: 10px; /* Uniform margin to handle spacing */
+    border-radius: 8px;
+    box-sizing: border-box;
+    width: 15rem;
+    padding: 1rem;
+}
+
+#div3 div img {
+    width: 10rem; /* Ensure image fills container */
+}
+
+#div3 div button {
+    border: none;
+    border-radius: 7px;
+    padding: 10px 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    background: radial-gradient(circle, #560883, #8b21bd);
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#div3 div h5 {
+    color: white;
+    font-weight: bold;
+    margin: 1.1rem 0;
+}
+
+#div3 h1 {
+    color: white;
+    padding-bottom: 3rem;
+}
+
+/* Media queries for responsiveness */
+
+/* For tablets and medium screens */
+@media (max-width: 768px) {
+    #div3 {
+        padding: 6vh;
+    }
+
+    #div3 .same {
+        width: 12rem; /* Adjust card width */
+        margin: 10px 5px; /* Adjust margins for better fit */
+    }
+
+    #div3 div img {
+        width: 8rem; /* Reduce image size */
+    }
+
+    #div3 div h5 {
+        font-size: 16px; /* Reduce heading size */
+        margin: 0.8rem 0;
+    }
+
+    #div3 div button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+/* For mobile phones and small screens */
+@media (max-width: 480px) {
+    #div3 {
+        padding: 4vh;
+    }
+
+    #div3 h1 {
+        font-size: 24px;
+        padding-bottom: 2rem;
+    }
+
+    #div3 .same {
+        width: 100%; /* Make cards full-width */
+        margin: 10px 0; /* Adjust margins */
+        padding: 1rem;
+    }
+
+    #div3 div img {
+        width: 6rem; /* Further reduce image size */
+    }
+
+    #div3 div h5 {
+        font-size: 14px;
+        margin: 0.5rem 0;
+    }
+
+    #div3 div button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}
+
+
+/* About section styling with video background */
+#div4 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    color: white;
+    overflow: hidden;
+    height: 100%;
+}
+
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+#div4 main {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    border: 2px solid white;
+    width: 95%;
+    border-radius: 15px;
+    padding: 2rem 2rem;
+    background-color: #3333336e;
+}
+
+#div4 h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#div4 h5 {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+#div4 p {
+    font-size: 18px;
+}
+
+.gradient-button {
+    background: linear-gradient(90deg, #c56cd6, #3427aa);
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.gradient-button:hover {
+    background: linear-gradient(90deg, #d14b92, #685bff);
+}
+
+/* Media queries for responsiveness */
+
+/* For tablets and medium screens */
+@media (max-width: 768px) {
+    #div4 {
+        padding: 30px;
+    }
+
+    #div4 h2 {
+        font-size: 28px;
+    }
+
+    #div4 h5 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    #div4 p {
+        font-size: 16px;
+    }
+
+    .gradient-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+/* For mobile phones and small screens */
+@media (max-width: 480px) {
+    #div4 {
+        padding: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #div4 main {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    #div4 h2 {
+        font-size: 24px;
+    }
+
+    #div4 h5 {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    #div4 p {
+        font-size: 14px;
+    }
+
+    .gradient-button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}
+
+.transparent-image img {
+    width: 150px; /* Adjust the width as needed */
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Center the image */
+}
+
+@media(max-width: 315px) {
+    .div2{
+        width:100%;
+    }
+    #div3{
+        width:100%;
+    }
+    #div4{
+        width:100%;
+    }
+    .same div img {
+        max-width: 30%;
+    }
+}
+
+@media (max-width: 280px) {
+   
+
+    #sort h1 {
+        font-size: 1rem; /* Adjust font size */
+        padding-top: 2.5rem;
+    }
+}
